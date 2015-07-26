@@ -1,0 +1,26 @@
+import acm.program.*;
+
+public class SwapExample extends ConsoleProgram {
+	
+	public void run(){
+		int[] array = new int[5];
+		array[0] = 1;
+		array[1] = 2;
+		
+		println("Buggy swap results:");
+		swapElementsBuggy(array[0], array[1]);
+		println("array[0] = " + array[0]);
+		println("array[1] = " + array[1]);
+		
+		println("Buggy swap results:");
+		swapElementsBuggy(array[0], array[1]);
+		println("array[0] = " + array[0]);
+		println("array[1] = " + array[1]);
+	}
+	
+	private void swapElementsBuggy(int x, int y){
+		int temp = x;
+		 x = y;
+		 y = temp;
+	}
+}
